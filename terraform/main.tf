@@ -16,7 +16,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "terraform-aws-vpc-terraform-state"
+    bucket = "terraform-aws-vpcterraform-state"
     key    = "default-infrastructure"
     region = "us-east-1"
   }
