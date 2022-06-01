@@ -12,14 +12,12 @@ terraform {
 
 provider "aws" {
   region     = var.region
-  access_key = "AKIA5XYOJQYUM66PC4CQ"
-  secret_key = "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"
 }
 
 terraform {
   backend "s3" {
     bucket = "terraform-aws-vpc-state"
     key    = "default-infrastructure"
-    region = var.region
+    region = "us-east-1"
   }
 }
