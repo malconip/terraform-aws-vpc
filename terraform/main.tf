@@ -11,12 +11,12 @@ terraform {
 }
 
 provider "aws" {
-  region     = var.region
+  region = var.region
 }
 
 terraform {
   backend "s3" {
-    bucket = "terraform-aws-vpc-state"
+    bucket = "terraform-aws-vpc-terraform-state"
     key    = "default-infrastructure"
     region = "us-east-1"
   }
