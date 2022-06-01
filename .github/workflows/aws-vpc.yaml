@@ -1,4 +1,4 @@
-name: Deploy IAM in AWS
+name: Deploy VPC in AWS
 
 on:
   push:
