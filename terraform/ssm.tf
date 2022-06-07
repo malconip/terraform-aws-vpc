@@ -8,9 +8,6 @@ resource "aws_ssm_parameter" "vpc-id" {
     environment = "prod"
 
   }
-  depends_on = [
-    aws_vpc.prod-vpc
-  ]
 }
 
 resource "aws_ssm_parameter" "ssm-prod-subnet-public-1" {
@@ -23,9 +20,6 @@ resource "aws_ssm_parameter" "ssm-prod-subnet-public-1" {
     environment = "prod"
 
   }
-  depends_on = [
-    aws_subnet.prod-subnet-public-1
-  ]
 }
 
 resource "aws_ssm_parameter" "ssm-prod-subnet-public-2" {
@@ -38,7 +32,4 @@ resource "aws_ssm_parameter" "ssm-prod-subnet-public-2" {
     environment = "prod"
 
   }
-  depends_on = [
-    aws_subnet.prod-subnet-public-2
-  ]
 }
