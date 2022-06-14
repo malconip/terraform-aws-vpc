@@ -4,7 +4,9 @@ resource "aws_subnet" "prod-subnet-public-1" {
   map_public_ip_on_launch = "true"
   availability_zone       = "us-east-1a"
   tags = {
-    Name = "prod-subnet-public-1"
+    "Name"                                      = "prod-subnet-public-1"
+    "kubernetes.io/cluster/${var.cluster_name}" = "shared"
+    "kubernetes.io/role/elb"                    = 1
   }
 }
 resource "aws_subnet" "prod-subnet-public-2" {
@@ -13,6 +15,8 @@ resource "aws_subnet" "prod-subnet-public-2" {
   map_public_ip_on_launch = "true"
   availability_zone       = "us-east-1b"
   tags = {
-    Name = "prod-subnet-public-2"
+    "Name"                                      = "prod-subnet-public-2"
+    "kubernetes.io/cluster/${var.cluster_name}" = "shared"
+    "kubernetes.io/role/elb"                    = 1
   }
 }
